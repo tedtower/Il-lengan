@@ -19,23 +19,40 @@
 <body>
 
 <!-- Card group -->
-<div class="d-flex flex-wrap justify-content-center">
+<div class="d-flex flex-wrap">
 
     <!-- Card -->
     <div class="card cd-mw">
       <!-- Card image -->
-        <img class="card-img-top" src="media/card.jpeg" alt="Name of the Product">
+        <a data-toggle="modal" href="#menu_modal">
+          <img class="card-img-top" src="media/card.jpeg" alt="Name of the Product">
+        </a>
       <!-- Card content -->
-      <div class="card-body delius">
+      <div class="card-body p-0 m-0 gabriola">
         <!-- Title -->
-        <a href="#" class="deep-orange-text"><h5 class="text-truncate"><b>Menu Item Name</b></h5></a>
-        <h6>&#8369;Enter price here.</h6>
+        <p class="text-truncate float-left menu-title" id="mt">Menu Item Name</p>
+        <p class="float-right menu-price" id="mp">100 php</p>
       </div>
     </div>
     <!-- Card -->
   
   </div>
   <!-- Card group -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="menu_modal" tabindex="-1" role="dialog" aria-labelledby="menuItemModal" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-body gabriola">
+          <h4>Menu Item Name</h4>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-dark-green waves-effect" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-dark-green">Save To Order List</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- SCRIPTS -->
   <!-- JQuery -->
