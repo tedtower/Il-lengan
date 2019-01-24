@@ -42,12 +42,28 @@
   <!-- Modal -->
   <div class="modal fade" id="menu_modal" tabindex="-1" role="dialog" aria-labelledby="menuItemModal" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-body gabriola">
-          <h4>Menu Item Name</h4>
+      <div class="modal-content" style="padding:0px;">
+        <!-- Modal Body -->
+        <div class="modal-body">
+            <!-- Menu Image -->
+            <img class="w-100" src="media/card.jpeg" alt="Menu Item Name">
+            <!-- Title And Price -->
+            <div class="d-flex justify-content-between gabriola rp-title">
+                <span>Menu Item Name</span>
+                <span>100 php</span>
+            </div>
+            <!-- Description -->
+            <p class="p-ti">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet commodo nulla facilisi nullam.</p>
+            <!-- Quantity Form -->
+            <form class="form-inline">
+              <div class="form-group">
+                <label for="quantity">Qty.</label>
+                <input type="text" id="quantity" class="form-control mx-sm-2 w-25">
+              </div>
+            </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-outline-dark-green waves-effect" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-outline-dark-green" data-dismiss="modal">Close</button>
           <button type="button" class="btn btn-dark-green">Save To Order List</button>
         </div>
       </div>
