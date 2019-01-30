@@ -54,13 +54,34 @@
             </div>
             <!-- Description -->
             <p class="p-ti">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet commodo nulla facilisi nullam.</p>
-            <!-- Quantity Form -->
-            <form class="form-inline">
-              <div class="form-group">
-                <label for="quantity">Qty.</label>
-                <input type="text" id="quantity" class="form-control mx-sm-2 w-25">
+            <hr>
+            <!-- Order Form -->
+            <h3>Order Details</h3>
+            <div class="input-group mb-3">
+                <div class="d-flex align-items-center w-100">
+                    <label class="px-1" for="size">Size:</label>
+                    <select class="browser-default custom-select delius" id="size" name="size">
+                      <option selected disabled>Select Order Size...</option>
+                      <option value="S">Small (100 php)</option>
+                      <option value="M">Medium (120php)</option>
+                      <option value="L">Large (140 php)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="md-form input-group mb-3">
+              <div class="d-flex flex-row">
+                <span class="px-1">Qty :</span>
+                <div class="input-group-prepend">
+                  <button class="btn btn-md btn-blue-grey m-0 px-3 py-2 z-depth-0" type="button" data-quantity="minus" data-field="quantity">
+                      <i class="fa fa-minus" aria-hidden="true"></i>
+                  </button>
+                  <input type="text" class="form-control" name="quantity" id="quantity" value="1">
+                  <button class="btn btn-md btn-blue-grey m-0 px-3 py-2 z-depth-0" type="button" data-quantity="plus" data-field="quantity">
+                      <i class="fa fa-plus" aria-hidden="true"></i>
+                  </button>
+                </div>
               </div>
-            </form>
+            </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-outline-dark-green" data-dismiss="modal">Close</button>
@@ -79,5 +100,6 @@
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="js/mdb.min.js"></script>
+  <script type="text/javascript" src="js/indec.js"></script>
 </body>
 </html>

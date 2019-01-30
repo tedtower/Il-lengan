@@ -72,10 +72,18 @@
 }
 
 .rp-title {
-    font-size: 40px;
+    font-size: 36px;
+    letter-spacing: -0.5px;
 }
 
 .p-ti {
-    font-size: 20px;
+    font-size: 17px;
     text-indent: 40px;
+}
+
+#quantity {
+    font-size: 17px;
+    font-family: Delius;
+    width: 60px;
+    text-align: center;
 }
