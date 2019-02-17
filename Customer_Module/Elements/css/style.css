@@ -51,6 +51,10 @@ body {
     font-family: Roboto;
 }
 
+.bg-logo {
+    background-color: #333534;
+}
+
 .menu-title, .menu-price {
     margin: 0px;
     padding: 0px;
@@ -110,7 +114,7 @@ body {
 }
 
 .subcategory {
-    border-bottom: 4px solid #a1887f;
+    border-bottom: 4px solid #865948;
 }
 
 /* The progress container (grey background) */
@@ -125,7 +129,7 @@ body {
   /* The progress bar (scroll indicator) */
   .progress-bar {
     height: 8px;
-    background: #ebad7a;
+    background: #EEB290;
     width: 0%;
   }
 

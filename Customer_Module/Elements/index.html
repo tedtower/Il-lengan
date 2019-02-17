@@ -18,7 +18,7 @@
 
 <!--Main Navigation-->
 <header>
-  <nav class="navbar navbar-expand-sm fixed-top navbar-dark brown darken-2 scrolling-navbar py-0 my-0">
+  <nav class="navbar navbar-expand-sm fixed-top navbar-dark bg-logo scrolling-navbar py-0 my-0">
     <img class="img-logo mr-3" src="media/logo.png">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,15 +27,16 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto roboto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Category 1</a>
+          <a class="nav-link" href="#">Menu</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Category 2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Category 3</a>
+          <a class="nav-link" href="#">Orders</a>
         </li>
       </ul>
+      <!-- Search form -->
+      <form class="navbar-nav py-0 my-0">
+        <input id="searchmenu" class="form-control" type="search" placeholder="Search here..." aria-label="Search">
+      </form>
     </div>
   </nav>
   <div class="progress-container">
@@ -45,11 +46,6 @@
 <!--Main Navigation-->
 
 <body>
-  <!-- Search form -->
-  <form class="form-inline mr-auto float-right">
-    <input class="form-control" type="text" placeholder="Enter keyword..." aria-label="Search">
-    <button class="btn btn-rounded btn-sm my-0 ml-sm-1" style="background-color:#a1887f;" type="submit"><span class="fa fa-search"></span> Search</button>
-  </form>
   <div> <!--Subcategory w/ Cards-->
     <div class="d-inline-flex px-4 animated flipInX slow subcategory mb-2 delius">
         <h5>Subcategory 1</h5>
@@ -150,7 +146,7 @@
               <!-- Title And Price -->
               <div class="d-flex justify-content-between gabriola rp-title">
                   <p>Menu Item Name</p>
-                  <p><span class="fs-24">₱</span>100-140</p>
+                  <p><span class="fs-24">₱</span>85</p>
               </div>
               <!-- Description -->
               <p class="p-ti">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet commodo nulla facilisi nullam.</p>
