@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Menu Card</title>
+  <title>Il-lengan: Menu</title>
   <!-- Font Awesome -->
   <link rel="stylesheet" href="css/all.min.css">
   <!-- Bootstrap core CSS -->
@@ -19,22 +19,29 @@
 <!--Main Navigation-->
 <header>
   <nav class="navbar navbar-expand-sm fixed-top navbar-dark bg-logo scrolling-navbar py-0 my-0">
-    <img class="img-logo mr-3" src="media/logo.png">
+    <a href="http://cm.illengan.com"><img class="img-logo mr-3" src="media/logo.png"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto roboto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Menu</a>
+        <li class="nav-item dropdown active">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+          aria-expanded="false" href="#"><span class="fas fa-utensils"></span> Menu</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="index.html">All</a>
+            <a class="dropdown-item" href="#">Category 1</a>
+            <a class="dropdown-item" href="#">Category 2</a>
+            <a class="dropdown-item" href="#">Category 3</a>
+          </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Orders</a>
+          <a class="nav-link" href="orders.html"><span class="fas fa-tasks"></span> Orders</a>
         </li>
       </ul>
       <!-- Search form -->
-      <form class="navbar-nav py-0 my-0">
+      <form class="navbar-nav py-0 my-2">
         <input id="searchmenu" class="form-control" type="search" placeholder="Search here..." aria-label="Search">
       </form>
     </div>
@@ -98,6 +105,7 @@
             </div>
             <!-- Description -->
             <p class="p-ti">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet commodo nulla facilisi nullam.</p>
+            <h4 class="gabriola">Status: <span class="teal-text">Available</span></h4>
             <hr>
             <!-- Order Form -->
             <h3 class="gabriola">Order Details</h3>
@@ -116,11 +124,11 @@
               <div class="d-flex flex-row">
                 <span class="px-1">Qty :</span>
                 <div class="input-group-prepend">
-                  <button class="btn btn-md btn-brown m-0 px-3 py-2 z-depth-0" type="button" data-quantity="minus" data-field="quantity">
+                  <button class="btn btn-md btn-light m-0 px-3 py-2 z-depth-0" type="button" data-quantity="minus" data-field="quantity">
                       <i class="fa fa-minus" aria-hidden="true"></i>
                   </button>
                   <input type="text" class="form-control" name="quantity" id="quantity" value="1">
-                  <button class="btn btn-md btn-brown m-0 px-3 py-2 z-depth-0" type="button" data-quantity="plus" data-field="quantity">
+                  <button class="btn btn-md btn-light m-0 px-3 py-2 z-depth-0" type="button" data-quantity="plus" data-field="quantity">
                       <i class="fa fa-plus" aria-hidden="true"></i>
                   </button>
                 </div>
@@ -128,8 +136,8 @@
             </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-outline-dark-green" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-dark-green">Save To Order List</button>
+          <button type="button" class="btn btn-outline-accent" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-accent">Save To Order List</button>
         </div>
       </div>
     </div>
@@ -150,6 +158,7 @@
               </div>
               <!-- Description -->
               <p class="p-ti">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet commodo nulla facilisi nullam.</p>
+              <h4 class="gabriola">Status: <span class="teal-text">Available</span></h4>
               <hr>
               <!-- Order Form -->
               <h3 class="gabriola">Order Details</h3>
@@ -157,11 +166,11 @@
                 <div class="d-flex flex-row">
                   <span class="px-1">Qty :</span>
                   <div class="input-group-prepend">
-                    <button class="btn btn-md btn-brown m-0 px-3 py-2 z-depth-0" type="button" data-quantity="minus" data-field="quantity">
+                    <button class="btn btn-md btn-light m-0 px-3 py-2 z-depth-0" type="button" data-quantity="minus" data-field="quantity">
                         <i class="fa fa-minus" aria-hidden="true"></i>
                     </button>
                     <input type="text" class="form-control" name="quantity" id="quantity" value="1">
-                    <button class="btn btn-md btn-brown m-0 px-3 py-2 z-depth-0" type="button" data-quantity="plus" data-field="quantity">
+                    <button class="btn btn-md btn-light m-0 px-3 py-2 z-depth-0" type="button" data-quantity="plus" data-field="quantity">
                         <i class="fa fa-plus" aria-hidden="true"></i>
                     </button>
                   </div>
@@ -169,8 +178,8 @@
               </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-outline-dark-green" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-dark-green">Save To Order List</button>
+            <button type="button" class="btn btn-outline-accent" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-accent">Save To Order List</button>
           </div>
         </div>
       </div>

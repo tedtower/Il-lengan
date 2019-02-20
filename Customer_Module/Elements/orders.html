@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Il-lengan: Orders</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Custom Styles -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<!--Main Navigation-->
+<header>
+    <nav class="navbar navbar-expand-sm fixed-top navbar-dark bg-logo scrolling-navbar py-0 my-0">
+        <a href="http://cm.illengan.com"><img class="img-logo mr-3" src="media/logo.png"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto roboto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                        aria-expanded="false" href="#"><span class="fas fa-utensils"></span> Menu</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="index.html">All</a>
+                        <a class="dropdown-item" href="#">Category 1</a>
+                        <a class="dropdown-item" href="#">Category 2</a>
+                        <a class="dropdown-item" href="#">Category 3</a>
+                    </div>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" data-toggle="modal" href="#orderlist"><span class="fas fa-tasks"></span> Orders</a>
+                </li>
+            </ul>
+            <!-- Search form -->
+            <form class="navbar-nav py-0 my-2">
+                <input id="searchmenu" class="form-control" type="search" placeholder="Search here..." aria-label="Search">
+            </form>
+        </div>
+    </nav>
+</header>
+<!--Main Navigation-->
+
+<body>
+    <div class="text-center">
+        <h1 class="gabriola">Orderlist</h1>
+        <table class="table table-sm table-hover w-75 w-responsive mx-auto delius">
+            <thead>
+                <tr>
+                <th scope="col">Menu Item</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Total Price</th>
+                <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                <th scope="row">Menu Item 1</th>
+                <td>1</td>
+                <td>100.00 php</td>
+                <td>
+                    <button type="button" class="btn btn-mdb-color btn-sm m-0 p-2" data-toggle="modal" data-target="#editModal">Edit</button>
+                    <button type="button" class="btn btn-danger btn-sm m-0 p-2" data-toggle="modal" data-target="#deleteModal">Remove</button>
+                </td>
+                </tr>
+                <tr>
+                <th scope="row">Menu Item 2</th>
+                <td>2</td>
+                <td>200.00 php</td>
+                <td>
+                    <button type="button" class="btn btn-mdb-color btn-sm m-0 p-2" data-toggle="modal" data-target="#editModal">Edit</button>
+                    <button type="button" class="btn btn-danger btn-sm m-0 p-2" data-toggle="modal" data-target="#deleteModal">Remove</button>
+                </td>
+                </tr>
+            </tbody>
+        </table>
+        <h3 class="gabriola">Total Price: 300.00 php</h3>
+        <button data-toggle="modal" class="btn btn-green btn-md delius" data-target="#proceed_modal">Order Now!</button>
+    </div>
+
+    <!-- Order Modal -->
+    <div class="modal fade" id="proceed_modal" tabindex="-1" role="dialog" aria-labelledby="proceedOrderModal" aria-hidden="true">
+        <div class="modal-dialog modal-md modal-dialog-centered" role="document">
+          <div class="modal-content" style="padding:0px;">
+            <!-- Modal Body -->
+            <div class="modal-body text-center">
+                <h3 class="gabriola">One More Step</h3>
+                <p>Please confirm that all the changes made are the final order list to be submitted. If yes, please enter necessary details below.</p>
+                <div class="md-form input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Your Name..." aria-label="Username" aria-describedby="inputName">
+                </div>
+                <div class="md-form input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Your Table Number..." aria-label="Username" aria-describedby="inputName">
+                </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-dark-green" data-dismiss="modal">Oh, Wait...</button>
+              <button type="button" class="btn btn-dark-green" onclick="window.location.href='/thankyou.html'">Proceed To Order</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Edit Modal -->
+    <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editOrderModal" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content" style="padding:0px;">
+            <!-- Modal Body -->
+            <div class="modal-body">
+                <h3 class="text-center gabriola">Edit Menu Item 1</h3>
+                <h6>Current Quantity: 1</h6>
+                <br>
+                <div class="d-flex flex-row">
+                    <span class="px-1">New Quantity:</span>
+                    <div class="input-group-prepend">
+                        <button class="btn btn-md btn-light m-0 px-3 py-2 z-depth-0" type="button" data-quantity="minus" data-field="quantity">
+                            <i class="fa fa-minus" aria-hidden="true"></i>
+                        </button>
+                        <input type="text" class="form-control" name="quantity" id="quantity" value="1">
+                        <button class="btn btn-md btn-light m-0 px-3 py-2 z-depth-0" type="button" data-quantity="plus" data-field="quantity">
+                            <i class="fa fa-plus" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-mdb-color" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-mdb-color" href="#proceed_order">Save</button>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Remove Modal -->
+    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteOrderModal" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+            <div class="modal-content" style="padding:0px;">
+            <!-- Modal Body -->
+            <div class="modal-body text-center">
+                <i class="fas fa-times fa-4x animated rotateIn text-danger"></i>
+                <p class="delius">Are you sure you want to remove the <span class="text-danger">'#Menu Item 1'</span> from your orderlist?</p>
+            </div>
+            <div class="modal-footer py-1">
+                <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-danger" href="#proceed_order">Remove</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <script type="text/javascript" src="js/indec.js"></script>
+</body>
+
+</html>
