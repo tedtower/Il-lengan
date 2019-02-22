@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'Delius';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../webfonts/delius-v8-latin-regular.eot'); 
+    src: local('Delius-Regular'),
+         url('../../font/delius/delius-v8-latin-regular.eot?#iefix') format('embedded-opentype'), 
+         url('../../font/delius/delius-v8-latin-regular.woff2') format('woff2'), 
+         url('../../font/delius/delius-v8-latin-regular.woff') format('woff'),
+         url('../../font/delius/delius-v8-latin-regular.ttf') format('truetype'), 
+         url('../../font/delius/delius-v8-latin-regular.svg#Delius') format('svg'); 
+}
+.delius {
+    font-family: 'Delius';
+}

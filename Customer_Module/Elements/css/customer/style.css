@@ -1,0 +1,95 @@
+body {
+    margin-top: 75px;
+}
+.nav-logo{
+    width: 38px;
+    height: 38px;
+}
+.c-focus a{
+    color: #ececec !important;
+}
+.c-focus:hover a{
+    color: #363636 !important;
+}
+.active-sbar input[type=search]:focus:not([readonly]) {
+    border: 1px solid #dbac76;
+    box-shadow: 0 0 0 1px #dbac76;
+}
+.sbar{
+    width: 200px;
+    height: 35px;
+}
+.progress-container {
+    width: 100%;
+    height: 8px;
+    background: #dfdfdf;
+    position: fixed;
+    margin-top: -29px;
+    z-index: 5;
+  }
+.progress-bar {
+    height: 8px;
+    background: #dbac76;
+    width: 0%;
+}
+.menu-title, .menu-price {
+    margin: 0px;
+    padding: 0px;
+    font-size: 23px;
+    letter-spacing: -0.5px;
+    color: #333534;
+}
+#mt {
+    width: 145px;
+    padding-left: 10px;
+}
+#mp {
+    padding-right: 10px;
+}
+.cd-mw {
+    max-width: 280px;
+    min-width: 220x;
+    flex: 1 0 22%;
+    margin: 5px;
+}
+.fs-15 {
+    font-size: 15px;
+}
+.fs-24 {
+    font-size: 24px;
+}
+.subcategory {
+    border-bottom: 4px solid #EEB290;
+}
+.btn-accent {
+    background-color: #b96e43;
+    color: #ffffff;
+}
+.btn-outline-accent {
+  border: 2px solid #b96e43;
+  color: #b96e43;
+  background-color: white;
+}
+.btn-outline-accent:hover, .btn-outline-accent:focus {
+    color: #b96e43;
+}
+.btn-accent:hover, .btn-accent:focus {
+    color: #ffffff;
+}
+.rp-title {
+    font-size: 36px;
+    letter-spacing: -0.5px;
+}
+.p-ti {
+    font-size: 17px;
+    text-indent: 40px;
+}
+#quantity {
+    font-size: 17px;
+    font-family: Delius;
+    width: 60px;
+    text-align: center;
+}
+.ty-logo {
+    width: 150px;
+}

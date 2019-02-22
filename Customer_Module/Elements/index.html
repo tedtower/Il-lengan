@@ -1,201 +1,287 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Il-lengan: Menu</title>
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="css/all.min.css">
-  <!-- Bootstrap core CSS -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <!-- Material Design Bootstrap -->
-  <link href="css/mdb.min.css" rel="stylesheet">
-  <!-- Custom Styles -->
-  <link href="css/style.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Il-Lengan: Customer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Webpage Icon -->
+    <link rel="icon" href="media/logo.png" type="image/png" />
+    <!-- Frameworks -->
+    <link rel="stylesheet" type="text/css" media="screen" href="css/frameworks/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/frameworks/mdb.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/frameworks/animations-extended.min.css">
+    <!-- Fonts -->
+    <link rel="stylesheet" type="text/css" media="screen" href="css/frameworks/font-awesome.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/customer/gabriola.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/customer/delius.css">
+    <!-- Custom -->
+    <link rel="stylesheet" type="text/css" media="screen" href="css/customer/style.css">
 </head>
 
 <!--Main Navigation-->
 <header>
-  <nav class="navbar navbar-expand-sm fixed-top navbar-dark bg-logo scrolling-navbar py-0 my-0">
-    <a href="http://cm.illengan.com"><img class="img-logo mr-3" src="media/logo.png"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto roboto">
-        <li class="nav-item dropdown active">
-          <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-          aria-expanded="false" href="#"><span class="fas fa-utensils"></span> Menu</a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="index.html">All</a>
-            <a class="dropdown-item" href="#">Category 1</a>
-            <a class="dropdown-item" href="#">Category 2</a>
-            <a class="dropdown-item" href="#">Category 3</a>
-          </div>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="orders.html"><span class="fas fa-tasks"></span> Orders</a>
-        </li>
-      </ul>
-      <!-- Search form -->
-      <form class="navbar-nav py-0 my-2">
-        <input id="searchmenu" class="form-control" type="search" placeholder="Search here..." aria-label="Search">
-      </form>
+    <nav class="navbar fixed-top navbar-expand-sm navbar-dark elegant-color scrolling-navbar py-0">
+        <img src="media/logo.png" class="nav-logo mr-2 my-1" alt="Il-lengan logo" />
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto delius">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="menu-dd" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fal fa-utensils-alt"></i></i> Menu</a>
+                    <div class="dropdown-menu dropdown-default elegant-color c-focus" aria-labelledby="menu-dd">
+                        <a class="dropdown-item" href="#">Category 1</a>
+                        <a class="dropdown-item" href="#">Category 2</a>
+                        <a class="dropdown-item" href="#">Category 3</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" data-toggle="modal" href="#order_modal"><i class="fal fa-tasks"></i> Orders</a>
+                </li>
+            </ul>
+            <!-- Search form -->
+            <form class="navbar-nav py-0 my-1">
+                <div class="active-sbar">
+                    <input id="searchmenu" class="form-control" type="search" placeholder="Search here..." aria-label="Search">
+                </div>
+            </form>
+        </div>
+    </nav>
+    <!-- Progress Bar -->
+    <div class="progress-container">
+        <div class="progress-bar" id="bar"></div>
     </div>
-  </nav>
-  <div class="progress-container">
-      <div class="progress-bar" id="myBar"></div>
-  </div>
 </header>
-<!--Main Navigation-->
 
 <body>
-  <div> <!--Subcategory w/ Cards-->
+    <!-- Category -->
+    <div class="text-center gab py-0 my-0">
+        <h1>Category #</h1>
+    </div>
+
+    <!-- Subcategory -->
     <div class="d-inline-flex px-4 animated flipInX slow subcategory mb-2 delius">
         <h5>Subcategory 1</h5>
     </div>
+
     <!-- Card group -->
     <div class="d-flex flex-wrap">
-      <!-- Card -->
-      <div class="card cd-mw">
+
+        <!-- Card -->
+        <div class="card cd-mw">
         <!-- Card image -->
-          <a data-toggle="modal" href="#menu_modal_sizable">
+            <a data-toggle="modal" href="#menu_modal">
             <img class="card-img-top" src="media/card.jpeg" alt="Name of the Product">
-          </a>
-        <!-- Card content -->
-        <div class="card-body p-0 m-0 gabriola">
-          <!-- Title -->
-          <p class="text-truncate float-left menu-title" id="mt">Menu Item Name</p>
-          <p class="float-right menu-price" id="mp"><span class="fs-15">₱</span>100-140</p>
-        </div>
-      </div>
-      <!-- Card -->
-      <div class="card cd-mw">
-          <!-- Card image -->
-            <a data-toggle="modal" href="#menu_modal_unsizable">
-              <img class="card-img-top" src="media/card.jpeg" alt="Name of the Product">
             </a>
-          <!-- Card content -->
-          <div class="card-body p-0 m-0 gabriola">
+            <!-- Card content -->
+            <div class="card-body p-0 m-0 gab">
+                <!-- Title -->
+                <p class="text-truncate float-left menu-title" id="mt">Menu Item Name</p>
+                <p class="float-right menu-price" id="mp"><span class="fs-15">₱</span>100-140</p>
+            </div>
+        </div>
+
+        <!-- Card -->
+        <div class="card cd-mw">
+            <!-- Card image -->
+            <a data-toggle="modal" href="#menu_modal">
+                <img class="card-img-top" src="media/card.jpeg" alt="Name of the Product">
+            </a>
+            <!-- Card content -->
+            <div class="card-body p-0 m-0 gab">
             <!-- Title -->
             <p class="text-truncate float-left menu-title" id="mt">Menu Item Name</p>
             <p class="float-right menu-price" id="mp"><span class="fs-15">₱</span>85</p>
-          </div>
-        </div>
-    </div>
-    <!-- Card group -->
-  </div>
-  
-
-  <!-- Sizable Modal -->
-  <div class="modal fade" id="menu_modal_sizable" tabindex="-1" role="dialog" aria-labelledby="menuItemModal" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-      <div class="modal-content" style="padding:0px;">
-        <!-- Modal Body -->
-        <div class="modal-body">
-            <!-- Menu Image -->
-            <img class="w-100" src="media/card.jpeg" alt="Menu Item Name">
-            <!-- Title And Price -->
-            <div class="d-flex justify-content-between gabriola rp-title">
-                <p>Menu Item Name</p>
-                <p><span class="fs-24">₱</span>100-140</p>
             </div>
-            <!-- Description -->
-            <p class="p-ti">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet commodo nulla facilisi nullam.</p>
-            <h4 class="gabriola">Status: <span class="teal-text">Available</span></h4>
-            <hr>
-            <!-- Order Form -->
-            <h3 class="gabriola">Order Details</h3>
-            <div class="input-group mb-3" id="sizable">
-                <div class="d-flex align-items-center w-100">
-                    <label class="px-1" for="size">Size:</label>
-                    <select class="browser-default custom-select delius" id="size" name="size">
-                      <option selected disabled>Select Order Size...</option>
-                      <option value="S">Small (100 php)</option>
-                      <option value="M">Medium (120php)</option>
-                      <option value="L">Large (140 php)</option>
-                    </select>
+        </div>
+
+    </div>
+
+    <!-- Sizable Modal -->
+    <div class="modal fade" id="menu_modal" tabindex="-1" role="dialog" aria-labelledby="menuItemModal" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content" style="padding:0px;">
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <!-- Menu Image -->
+                    <img class="w-100" src="media/card.jpeg" alt="Menu Item Name">
+                    <!-- Title And Price -->
+                    <div class="d-flex justify-content-between gab rp-title">
+                        <p>Menu Item Name</p>
+                        <p><span class="fs-24">₱</span>100-140</p>
+                    </div>
+                    <!-- Description -->
+                    <p class="p-ti">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet commodo nulla facilisi nullam.</p>
+                    <h4 class="gab">Status: <span class="teal-text">Available</span></h4>
+                    <hr>
+                    <!-- Order Form -->
+                    <h3 class="gab">Order Details</h3>
+                    <div class="input-group mb-3" id="sizable">
+                        <div class="d-flex align-items-center w-100">
+                            <label class="px-1" for="size">Size:</label>
+                            <select class="browser-default custom-select delius font-weight-bold" id="size" name="size" required>
+                            <option selected disabled>Select Order Size...</option>
+                            <option value="100">Small (100 php)</option>
+                            <option value="120">Medium (120php)</option>
+                            <option value="140">Large (140 php)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="md-form input-group mb-3">
+                        <div class="d-flex flex-row">
+                            <span class="px-1">Qty: </span>
+                            <div class="input-group-prepend">
+                            <button class="btn btn-md btn-light m-0 py-2 z-depth-0" type="button" data-quantity="minus" data-field="quantity">
+                                <i class="fa fa-minus" aria-hidden="true"></i>
+                            </button>
+                            <input type="text" class="form-control text-center font-weight-bold" name="quantity" id="quantity" value="1" disabled>
+                            <button class="btn btn-md btn-light m-0 py-2 z-depth-0" type="button" data-quantity="plus" data-field="quantity">
+                                <i class="fa fa-plus" aria-hidden="true"></i>
+                            </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center float-right">
+                        <button type="button" class="btn btn-outline-accent px-3" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-accent px-3">Save To Order List</button>
+                    </div>
                 </div>
             </div>
-            <div class="md-form input-group mb-3">
-              <div class="d-flex flex-row">
-                <span class="px-1">Qty :</span>
-                <div class="input-group-prepend">
-                  <button class="btn btn-md btn-light m-0 px-3 py-2 z-depth-0" type="button" data-quantity="minus" data-field="quantity">
-                      <i class="fa fa-minus" aria-hidden="true"></i>
-                  </button>
-                  <input type="text" class="form-control" name="quantity" id="quantity" value="1">
-                  <button class="btn btn-md btn-light m-0 px-3 py-2 z-depth-0" type="button" data-quantity="plus" data-field="quantity">
-                      <i class="fa fa-plus" aria-hidden="true"></i>
-                  </button>
-                </div>
-              </div>
-            </div>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-outline-accent" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-accent">Save To Order List</button>
-        </div>
-      </div>
     </div>
-  </div>
 
-  <!-- Unsizable Modal -->
-  <div class="modal fade" id="menu_modal_unsizable" tabindex="-1" role="dialog" aria-labelledby="menuItemModal" aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-        <div class="modal-content" style="padding:0px;">
-          <!-- Modal Body -->
-          <div class="modal-body">
-              <!-- Menu Image -->
-              <img class="w-100" src="media/card.jpeg" alt="Menu Item Name">
-              <!-- Title And Price -->
-              <div class="d-flex justify-content-between gabriola rp-title">
-                  <p>Menu Item Name</p>
-                  <p><span class="fs-24">₱</span>85</p>
-              </div>
-              <!-- Description -->
-              <p class="p-ti">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet commodo nulla facilisi nullam.</p>
-              <h4 class="gabriola">Status: <span class="teal-text">Available</span></h4>
-              <hr>
-              <!-- Order Form -->
-              <h3 class="gabriola">Order Details</h3>
-              <div class="md-form input-group mb-3">
-                <div class="d-flex flex-row">
-                  <span class="px-1">Qty :</span>
-                  <div class="input-group-prepend">
-                    <button class="btn btn-md btn-light m-0 px-3 py-2 z-depth-0" type="button" data-quantity="minus" data-field="quantity">
-                        <i class="fa fa-minus" aria-hidden="true"></i>
+    <!-- Order Modal -->
+    <div class="modal fade" id="order_modal" tabindex="-1" role="dialog" aria-labelledby="orderListModal" aria-hidden="true">
+        <div class="modal-dialog modal-md modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <button type="button" class="close d-flex justify-content-end" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true" class="rp-title">&times;</span>
                     </button>
-                    <input type="text" class="form-control" name="quantity" id="quantity" value="1">
-                    <button class="btn btn-md btn-light m-0 px-3 py-2 z-depth-0" type="button" data-quantity="plus" data-field="quantity">
-                        <i class="fa fa-plus" aria-hidden="true"></i>
-                    </button>
-                  </div>
+                    <div class="text-center">
+                        <h1 class="gab">Orderlist</h1>
+                        <table class="table table-sm table-hover w-responsive mx-auto delius">
+                            <thead>
+                                <tr>
+                                <th scope="col">Menu Item</th>
+                                <th scope="col">Quantity</th>
+                                <th scope="col">Total Price</th>
+                                <th scope="col">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                <th scope="row">Menu Item 1</th>
+                                <td>1</td>
+                                <td>100.00 php</td>
+                                <td>
+                                    <button type="button" class="btn btn-mdb-color btn-sm m-0 p-2" data-toggle="modal" data-target="#editModal">Edit</button>
+                                    <button type="button" class="btn btn-danger btn-sm m-0 p-2" data-toggle="modal" data-target="#deleteModal">Remove</button>
+                                </td>
+                                </tr>
+                                <tr>
+                                <th scope="row">Menu Item 2</th>
+                                <td>2</td>
+                                <td>200.00 php</td>
+                                <td>
+                                    <button type="button" class="btn btn-mdb-color btn-sm m-0 p-2" data-toggle="modal" data-target="#editModal">Edit</button>
+                                    <button type="button" class="btn btn-danger btn-sm m-0 p-2" data-toggle="modal" data-target="#deleteModal">Remove</button>
+                                </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h3 class="gab">Total Price: 300.00 php</h3>
+                    </div>
+                    <div class="text-center">
+                        <button type="button" data-toggle="modal" class="btn btn-green btn-md delius" data-target="#proceed_modal">Order Now!</button>
+                    </div>
                 </div>
-              </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-outline-accent" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-accent">Save To Order List</button>
-          </div>
+            </div>
         </div>
-      </div>
     </div>
 
-  <div style="height:1500px;"></div>
+    <!-- Proceed Order Modal -->
+    <div class="modal fade" id="proceed_modal" tabindex="-1" role="dialog" aria-labelledby="proceedOrderModal" aria-hidden="true">
+        <div class="modal-dialog modal-md modal-dialog-centered" role="document">
+            <div class="modal-content" style="padding:0px;">
+            <!-- Modal Body -->
+            <div class="modal-body text-center delius">
+                <h3 class="gab">One More Step</h3>
+                <p class="px-2">Please confirm that all the changes made are the final order list to be submitted. If yes, please enter necessary details below.</p>
+                <div class="md-form input-group mb-3">
+                    <input type="text" id=name class="form-control text-center" placeholder="Your Name" aria-label="Username" aria-describedby="inputName">
+                </div>
+                <div class="md-form input-group mb-3">
+                    <input type="number" min="1" id="tablenum" class="form-control text-center" placeholder="Your Table Number" aria-label="Username" aria-describedby="inputName">
+                </div>
+            </div>
+            <div class="modal-footer justify-content-center delius">
+                <button type="button" class="btn btn-outline-dark-green" data-dismiss="modal">I'm Not Done Yet</button>
+                <button type="button" class="btn btn-dark-green" onclick="window.location.href='thankyou.html'">Proceed To Order</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Edit Modal -->
+    <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editOrderModal" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+            <div class="modal-content" style="padding:0px;">
+            <!-- Modal Body -->
+            <div class="modal-body">
+                <h3 class="text-center gab">Menu Item 1</h3>
+                <h6 class="py-2 delius">Current Quantity: 1</h6>
+                <div class="md-form input-group mb-3">
+                    <div class="d-flex flex-row delius">
+                        <span class="pr-2">New Quantity:</span>
+                        <div class="input-group-prepend">
+                            <button class="btn btn-md btn-light m-0 px-3 py-2 z-depth-0" type="button" data-quantity="minus" data-field="quantity">
+                                <i class="fa fa-minus" aria-hidden="true"></i>
+                            </button>
+                            <input type="text" class="form-control font-weight-bold" name="quantity" id="quantity" value="1" disabled>
+                            <button class="btn btn-md btn-light m-0 px-3 py-2 z-depth-0" type="button" data-quantity="plus" data-field="quantity">
+                                <i class="fa fa-plus" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer py-1 justify-content-center">
+                <button type="button" class="btn btn-outline-mdb-color" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-mdb-color" href="#proceed_order">Save</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Remove Modal -->
+    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteOrderModal" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+            <div class="modal-content" style="padding:0px;">
+            <!-- Modal Body -->
+            <div class="modal-body text-center py-1">
+                <i class="fas fa-times fa-4x animated rotateIn text-danger"></i>
+                <p class="delius">Are you sure you want to remove the <span class="text-danger">'#Menu Item 1'</span> from your orderlist?</p>
+            </div>
+            <div class="modal-footer justify-content-center py-1">
+                <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-danger" href="#proceed_order">Remove</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    
 
-  <!-- SCRIPTS -->
-  <!-- JQuery -->
-  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-  <!-- Bootstrap tooltips -->
-  <script type="text/javascript" src="js/popper.min.js"></script>
-  <!-- Bootstrap core JavaScript -->
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
-  <!-- MDB core JavaScript -->
-  <script type="text/javascript" src="js/mdb.min.js"></script>
-  <script type="text/javascript" src="js/indec.js"></script>
+    <!-- Frameworks -->
+    <script src="js/frameworks/jquery-3.3.1.min.js"></script>
+    <script src="js/frameworks/popper.min.js"></script>
+    <script src="js/frameworks/bootstrap.min.js"></script>
+    <script src="js/frameworks/mdb.min.js"></script>
+    <!-- Custom -->
+    <script src="js/customer/progress.bar.js"></script>
+    <script src="js/customer/quantity.js"></script>
 </body>
 </html>
