@@ -56,6 +56,30 @@
 </header>
 
 <body>
+    <!-- Pag nag new customer siya magrerenew session tapos ishoshow to, pag nag new order lang siya as same customer, huwag na tong ipakita -->
+    <!-- Table Modal -->
+    <div class="modal fade" id="tableModal" tabindex="-1" role="dialog" aria-labelledby="Table Modal"
+    aria-hidden="true">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h4 class="modal-title w-100 gab">Enter Table Number</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <div class="md-form input-group m-0">
+                        <input type="text" id="tablenum" class="form-control text-center" placeholder="Customer's Table Number" aria-label="Cutomer Table" aria-describedby="inputName">
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button type="button" data-toggle="modal" class="btn btn-green btn-md delius" data-target="#proceed_modal">Continue</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Category -->
     <div class="text-center gab py-0 my-0">
         <h1>Category #</h1>
@@ -79,7 +103,7 @@
             <div class="card-body p-0 m-0 gab">
                 <!-- Title -->
                 <p class="text-truncate float-left menu-title" id="mt">Menu Item Name</p>
-                <p class="float-right menu-price" id="mp"><span class="fs-15">₱</span>100-140</p>
+                <p class="float-right menu-price" id="mp"><span class="fs-15">₱</span>100</p>
             </div>
         </div>
 
@@ -110,37 +134,63 @@
                     <!-- Title And Price -->
                     <div class="d-flex justify-content-between gab rp-title">
                         <p>Menu Item Name</p>
-                        <p><span class="fs-24">₱</span>100-140</p>
+                        <p><span class="fs-24">₱</span>100</p>
                     </div>
-                    <!-- Description -->
-                    <p class="p-ti">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet commodo nulla facilisi nullam.</p>
                     <h4 class="gab">Status: <span class="teal-text">Available</span></h4>
+                    <h4 class="gab">Status: <span class="text-danger">Unavailable</span></h4>
                     <hr>
                     <!-- Order Form -->
                     <h3 class="gab">Order Details</h3>
-                    <div class="input-group mb-3" id="sizable">
-                        <div class="d-flex align-items-center w-100">
-                            <label class="px-1" for="size">Size:</label>
-                            <select class="browser-default custom-select delius font-weight-bold" id="size" name="size" required>
-                            <option selected disabled>Select Order Size...</option>
-                            <option value="100">Small (100 php)</option>
+                    <span class="fs-15 delius"><i class="text-danger">Note:</i>The add-ons and temperature will reflect based on the quantity of the specific menu that you will order. If you want to differ the items, please order them separately.</span>
+                    <div class="input-group mb-3 mt-2" id="sizable">
+                        <div class="d-flex w-100 delius">
+                            <label class="px-1 mt-1 label-indent" for="size">Size:</label>
+                            <select class="browser-default custom-select" id="size" name="size" required>
+                            <option selected value="100">Small (100 php)</option>
                             <option value="120">Medium (120php)</option>
                             <option value="140">Large (140 php)</option>
                             </select>
                         </div>
                     </div>
-                    <div class="md-form input-group mb-3">
-                        <div class="d-flex flex-row">
-                            <span class="px-1">Qty: </span>
-                            <div class="input-group-prepend">
-                            <button class="btn btn-md btn-light m-0 py-2 z-depth-0" type="button" data-quantity="minus" data-field="quantity">
-                                <i class="fa fa-minus" aria-hidden="true"></i>
-                            </button>
-                            <input type="text" class="form-control text-center font-weight-bold" name="quantity" id="quantity" value="1" disabled>
-                            <button class="btn btn-md btn-light m-0 py-2 z-depth-0" type="button" data-quantity="plus" data-field="quantity">
-                                <i class="fa fa-plus" aria-hidden="true"></i>
-                            </button>
+                    <div class="delius d-flex flex-wrap w-100" style="overflow:auto;">
+                        <div class="md-form input-group mb-3 m-0 p-0 w-auto" style="width:auto;float: left;">
+                            <div class="d-flex flex-row mr-5">
+                                <span class="px-1 mt-1 label-indent">Qty: </span>
+                                <div class="input-group-prepend">
+                                <button class="btn btn-md btn-light m-0 py-1 px-3 z-depth-0" type="button" data-quantity="minus" data-field="quantity">
+                                    <i class="fa fa-minus" aria-hidden="true"></i>
+                                </button>
+                                <input type="text" class="form-control text-center font-weight-bold" name="quantity" id="quantity" value="1" disabled>
+                                <button class="btn btn-md btn-light m-0 py-1 px-3 z-depth-0" type="button" data-quantity="plus" data-field="quantity">
+                                    <i class="fa fa-plus" aria-hidden="true"></i>
+                                </button>
+                                </div>
                             </div>
+                        </div>
+                        <div class="input-group w-auto">
+                            <label for="hot-or-cold" class="mt-1">Temperature: &nbsp;</label>
+                            <input type="checkbox" class="hc mr-1" id="hot-or-cold" />
+                            <span class="mt-1 font-weight-bold" id="temp"> Cold</span>
+                        </div>
+                    </div>
+                    <h4 class="gab">Add-ons</h4>
+                    <div class="input-group mb-3 delius">
+                        <div class="input-group-prepend">
+                            <button class="btn btn-md btn-outline-accent m-0 px-3 py-2 z-depth-0" type="button">Add-on</button>
+                        </div>
+                        <select class="browser-default custom-select w-25" id="inputGroupSelect03" aria-label="Example select with button addon">
+                            <option selected disabled>Choose...</option>
+                            <option value="">No Thank You.</option>
+                            <option value="1">Addon One (15 php)</option>
+                            <option value="2">Addon Two (20 php)</option>
+                            <option value="3">Addon Three (25 php)</option>
+                        </select>
+                        <input type="number" min="1" placeholder="Quantity..." aria-label="Add-on Quantity" class="form-control">
+                    </div>
+                    <div class="delius form-group green-border-focus">
+                        <div class="d-flex flex-row">
+                            <span class="px-1 mt-1 label-indent">Notes: </span>
+                            <textarea class="form-control" id="exampleFormControlTextarea5" rows="2"></textarea>
                         </div>
                     </div>
                     <div class="text-center float-right">
@@ -154,7 +204,7 @@
 
     <!-- Order Modal -->
     <div class="modal fade" id="order_modal" tabindex="-1" role="dialog" aria-labelledby="orderListModal" aria-hidden="true">
-        <div class="modal-dialog modal-md modal-dialog-centered" role="document">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
             <div class="modal-content">
                 <!-- Modal Body -->
                 <div class="modal-body">
@@ -205,18 +255,12 @@
 
     <!-- Proceed Order Modal -->
     <div class="modal fade" id="proceed_modal" tabindex="-1" role="dialog" aria-labelledby="proceedOrderModal" aria-hidden="true">
-        <div class="modal-dialog modal-md modal-dialog-centered" role="document">
+        <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content" style="padding:0px;">
             <!-- Modal Body -->
             <div class="modal-body text-center delius">
-                <h3 class="gab">One More Step</h3>
-                <p class="px-2">Please confirm that all the changes made are the final order list to be submitted. If yes, please enter necessary details below.</p>
-                <div class="md-form input-group mb-3">
-                    <input type="text" id=name class="form-control text-center" placeholder="Your Name" aria-label="Username" aria-describedby="inputName">
-                </div>
-                <div class="md-form input-group mb-3">
-                    <input type="number" min="1" id="tablenum" class="form-control text-center" placeholder="Your Table Number" aria-label="Username" aria-describedby="inputName">
-                </div>
+                <h3 class="gab">One More Thing</h3>
+                <p class="px-2">Please confirm that all the changes made are the final order list to be submitted.</p>
             </div>
             <div class="modal-footer justify-content-center delius">
                 <button type="button" class="btn btn-outline-dark-green" data-dismiss="modal">I'm Not Done Yet</button>
@@ -228,14 +272,14 @@
     
     <!-- Edit Modal -->
     <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editOrderModal" aria-hidden="true">
-        <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+        <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content" style="padding:0px;">
             <!-- Modal Body -->
-            <div class="modal-body">
+            <div class="modal-body delius">
                 <h3 class="text-center gab">Menu Item 1</h3>
-                <h6 class="py-2 delius">Current Quantity: 1</h6>
+                <h6 class="py-2">Current Quantity: 1</h6>
                 <div class="md-form input-group mb-3">
-                    <div class="d-flex flex-row delius">
+                    <div class="d-flex flex-row">
                         <span class="pr-2">New Quantity:</span>
                         <div class="input-group-prepend">
                             <button class="btn btn-md btn-light m-0 px-3 py-2 z-depth-0" type="button" data-quantity="minus" data-field="quantity">
@@ -247,6 +291,28 @@
                             </button>
                         </div>
                     </div>
+                </div>
+                <div class="input-group w-auto mb-3">
+                        <label for="edit-temp" class="mt-1">Temperature: &nbsp;</label>
+                        <input type="checkbox" class="hc mr-1" id="edit-temp" />
+                        <span class="mt-1 font-weight-bold" id="edtemp"> Cold</span>
+                </div>
+                <div class="input-group mb-3 delius">
+                    <div class="input-group-prepend">
+                        <button class="btn btn-md btn-outline-mdb-color m-0 px-3 py-2 z-depth-0" type="button">Add-on</button>
+                    </div>
+                    <select class="browser-default custom-select w-25" id="inputGroupSelect03" aria-label="Example select with button addon">
+                        <option selected disabled>Choose...</option>
+                        <option value="">No Thank You.</option>
+                        <option value="1">Addon One (15 php)</option>
+                        <option value="2">Addon Two (20 php)</option>
+                        <option value="3">Addon Three (25 php)</option>
+                    </select>
+                    <input type="number" min="1" placeholder="Quantity..." aria-label="Add-on Quantity" class="form-control">
+                </div>
+                <div class="d-flex flex-row">
+                    <span class="px-1 mt-1 label-indent">Notes: </span>
+                    <textarea class="form-control" id="exampleFormControlTextarea5" rows="2"></textarea>
                 </div>
             </div>
             <div class="modal-footer py-1 justify-content-center">
@@ -281,7 +347,9 @@
     <script src="js/frameworks/bootstrap.min.js"></script>
     <script src="js/frameworks/mdb.min.js"></script>
     <!-- Custom -->
+    <script src="js/customer/loadmodal.js"></script>
     <script src="js/customer/progress.bar.js"></script>
     <script src="js/customer/quantity.js"></script>
+    <script src="js/customer/changtemp.js"></script>
 </body>
 </html>
